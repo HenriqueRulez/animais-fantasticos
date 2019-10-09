@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-param-reassign": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-console": "off"
+  }
+}
