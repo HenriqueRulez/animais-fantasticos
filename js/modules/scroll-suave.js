@@ -1,3 +1,5 @@
+import debounce from './debounce.js';
+
 export default class ScrollSuave {
   constructor(links, options) {
     this.linksInternos = document.querySelectorAll(links);
@@ -7,7 +9,7 @@ export default class ScrollSuave {
       this.options = options;
     }
 
-    this.scrollToSection = this.scrollToSection.bind(this);
+    this.scrollToSection = debounce(this.scrollToSection.bind(this), 200);
   }
 
   scrollToSection(event) {
