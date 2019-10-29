@@ -12,6 +12,7 @@ import fetchBtc from './modules/fetch-btc.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import { SlideNav } from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -49,3 +50,8 @@ funcionamento.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fetchBtc('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+
+slide.addControl('.custom-control');
