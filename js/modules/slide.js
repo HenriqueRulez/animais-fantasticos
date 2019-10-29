@@ -19,8 +19,6 @@ export class Slide {
 
   moveSlide(distX) {
     this.dist.movePosition = distX;
-    console.log(this.slide);
-
     this.slide.style.transform = `translate3d(${distX}px, 0px, 0px)`;
   }
 
